@@ -49,6 +49,7 @@ totalstepsperday <- data2 %>%
         summarise_each(funs(sum))
 
 hist(totalstepsperday$steps, xlab = "Total number of steps per day", main = "Total number of steps taken each day", col="red")
+dev.print(png, file = "Plot1.png", width = 480, height = 480, units = "px")# printing the final plot with the given specifications 
 
 ```
 
@@ -106,6 +107,7 @@ Step 2. plotting the average number of steps across all days
 plot(Avgstepsacrossalldays$interval,Avgstepsacrossalldays$steps, 
      type = "l", xlab = "interval", ylab = "Average steps across all days", 
      main = "Time series for average steps of all days")
+dev.print(png, file = "Plot2.png", width = 480, height = 480, units = "px")# printing the final plot with the given specifications 
 
 ```
 
